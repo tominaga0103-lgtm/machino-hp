@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ | 町野電設</title>
+  <meta name="description" content="配電盤の設計・製作・施工に関するご相談・お見積りはお気軽にお問い合わせください。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-main">町野電設</span>
+      <span class="logo-sub">配電盤の設計・製作・施工</span>
+    </a>
+    <nav class="nav">
+      <a href="services.html">事業内容</a>
+      <a href="works.html">施工実績</a>
+      <a href="index.html#flow">ご依頼の流れ</a>
+      <a href="recruit.html" class="nav-recruit">採用情報</a>
+      <a href="contact.html" class="nav-contact active">お問い合わせ</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="services.html">事業内容</a>
+    <a href="works.html">施工実績</a>
+    <a href="index.html#flow">ご依頼の流れ</a>
+    <a href="recruit.html">採用情報</a>
+    <a href="contact.html">お問い合わせ</a>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <span class="page-hero-label">Contact</span>
+    <h1>お問い合わせ</h1>
+    <p>ご相談・お見積りはお気軽にどうぞ。小さなご相談でも歓迎です。</p>
+  </div>
+</div>
+
+<div class="breadcrumb">
+  <div class="container">
+    <a href="index.html">ホーム</a>
+    <span>›</span>
+    お問い合わせ
+  </div>
+</div>
+
+<section class="contact-sec">
+  <div class="container">
+    <div class="contact-wrap">
+
+      <!-- ===== FORM ===== -->
+      <div class="contact-form-card">
+        <h2>お問い合わせフォーム</h2>
+
+        <form id="contactForm" novalidate>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="name">
+                お名前<span class="required-tag">必須</span>
+              </label>
+              <input class="form-input" type="text" id="name" name="name" placeholder="山田 太郎" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="company">
+                会社名・屋号<span class="optional-tag">任意</span>
+              </label>
+              <input class="form-input" type="text" id="company" name="company" placeholder="株式会社○○">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">
+              メールアドレス<span class="required-tag">必須</span>
+            </label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="example@email.com" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="type">
+              お問い合わせの種類<span class="required-tag">必須</span>
+            </label>
+            <select class="form-select" id="type" name="type" required>
+              <option value="">選択してください</option>
+              <option value="design">配電盤の設計・製作について</option>
+              <option value="construction">施工・設置について</option>
+              <option value="maintenance">点検・メンテナンスについて</option>
+              <option value="renewal">更新・改修工事について</option>
+              <option value="recruit">採用・求人について</option>
+              <option value="other">その他</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="prefecture">
+              物件・施設の所在地<span class="optional-tag">任意</span>
+            </label>
+            <select class="form-select" id="prefecture" name="prefecture">
+              <option value="">都道府県を選択</option>
+              <option>福岡県</option>
+              <option>佐賀県</option>
+              <option>長崎県</option>
+              <option>熊本県</option>
+              <option>大分県</option>
+              <option>宮崎県</option>
+              <option>鹿児島県</option>
+              <option>沖縄県</option>
+              <option>その他</option>
+            </select>
+            <p class="form-hint">九州全域対応しております。その他の地域もまずはご相談ください。</p>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message">
+              お問い合わせ内容<span class="required-tag">必須</span>
+            </label>
+            <textarea class="form-textarea" id="message" name="message" placeholder="ご相談内容・ご要望をできるだけ詳しくご記入ください。&#10;（例：工場の動力盤を新設したい、老朽化した配電盤をリニューアルしたい、など）" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-check">
+              <input type="checkbox" id="privacy" name="privacy" required>
+              <span><a href="#" target="_blank">プライバシーポリシー</a>に同意します</span>
+            </label>
+          </div>
+
+          <button type="submit" class="form-submit">送信する →</button>
+        </form>
+
+        <div class="form-success" id="formSuccess">
+          <p>お問い合わせありがとうございます！</p>
+          <small>内容を確認の上、2営業日以内にご返信いたします。</small>
+        </div>
+      </div>
+
+      <!-- ===== CONTACT INFO ===== -->
+      <div>
+        <div class="contact-info-card">
+          <h3>基本情報</h3>
+
+          <div class="info-item">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <div class="info-item-label">所在地</div>
+              <div class="info-item-value">福岡県福岡市南区<br>（詳細はお問い合わせ後にご案内します）</div>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div>
+              <div class="info-item-label">受付時間</div>
+              <div class="info-item-value">平日 9:00〜18:00<br>（土日祝・年末年始を除く）</div>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <div>
+              <div class="info-item-label">メール</div>
+              <div class="info-item-value">フォームよりお問い合わせください</div>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <div>
+              <div class="info-item-label">対応エリア</div>
+              <div class="info-item-value">九州全域<br>（福岡・佐賀・長崎・熊本・大分・宮崎・鹿児島）</div>
+            </div>
+          </div>
+
+          <div class="contact-map-placeholder">
+            📍 Googleマップを埋め込み予定
+          </div>
+        </div>
+
+        <div class="contact-info-card" style="margin-top: 20px; border-top: 4px solid var(--orange); border-radius: 12px;">
+          <h3 style="color: var(--orange);">採用についてのお問い合わせ</h3>
+          <p style="font-size: 14px; color: var(--text-light); line-height: 1.8;">
+            採用に関するご質問・ご応募も同じフォームからお送りください。「お問い合わせの種類」で<strong>「採用・求人について」</strong>をお選びください。
+          </p>
+          <a href="recruit.html" style="display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 700; color: var(--orange); margin-top: 14px;">
+            採用情報を見る →
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <div class="logo-main">町野電設</div>
+        <span class="logo-sub">配電盤の設計・製作・施工</span>
+        <p class="footer-about">福岡市南区を拠点に、九州全域の法人・施設向けに配電盤の設計・製作・施工・メンテナンスをワンストップで対応しています。</p>
+      </div>
+      <div class="footer-nav-wrap">
+        <div class="footer-nav-col">
+          <h4>事業内容</h4>
+          <a href="services.html">配電盤の設計・製作</a>
+          <a href="services.html">配電盤の施工・設置</a>
+          <a href="services.html">点検・メンテナンス</a>
+          <a href="services.html">更新・改修工事</a>
+        </div>
+        <div class="footer-nav-col">
+          <h4>その他</h4>
+          <a href="works.html">施工実績</a>
+          <a href="index.html#flow">ご依頼の流れ</a>
+          <a href="recruit.html">採用情報</a>
+          <a href="contact.html">お問い合わせ</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 町野電設 All Rights Reserved.</p>
+      <a href="#" class="footer-policy-link">プライバシーポリシー</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
