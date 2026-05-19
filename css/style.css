@@ -175,7 +175,8 @@ section { padding: 80px 0; }
   min-height: 580px;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, var(--navy) 0%, #162f5a 55%, #1e4e8c 100%);
+  background: linear-gradient(to right, rgba(12,31,74,0.92) 0%, rgba(12,31,74,0.70) 50%, rgba(12,31,74,0.10) 100%),
+              url('../images/hero2.png') center / cover no-repeat;
   overflow: hidden;
   padding: 80px 0;
 }
@@ -192,9 +193,12 @@ section { padding: 80px 0; }
   margin: 0 auto;
   padding: 0 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  grid-template-columns: 1fr;
+  gap: 0;
   align-items: center;
+  max-width: 680px;
+  margin-left: 0;
+  padding-left: max(20px, calc((100vw - var(--max-w)) / 2 + 20px));
 }
 .hero-badge {
   display: inline-flex;
