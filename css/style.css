@@ -368,22 +368,61 @@ section { padding: 80px 0; }
   align-items: flex-end;
   padding: 12px;
   position: relative;
+  overflow: hidden;
 }
-.work-img.w1 { background: linear-gradient(160deg, #1a3a6b 30%, #2563eb 100%); }
-.work-img.w2 { background: linear-gradient(160deg, #1a4a3b 30%, #1a8a5a 100%); }
-.work-img.w3 { background: linear-gradient(160deg, #3b1a5a 30%, #7c3aed 100%); }
-.work-img.w4 { background: linear-gradient(160deg, #5a3a1a 30%, #d97706 100%); }
-.work-img.w5 { background: linear-gradient(160deg, #1a3a5a 30%, #0891b2 100%); }
-.work-img.w6 { background: linear-gradient(160deg, #1a5a1a 30%, #16a34a 100%); }
-.work-img.w7 { background: linear-gradient(160deg, #5a1a1a 30%, #dc2626 100%); }
-.work-img.w8 { background: linear-gradient(160deg, #1a1a5a 30%, #4f46e5 100%); }
+/* 写真を使うカード（ph-*）。下端のみ暗くしてタグと文字ブロックに繋げる */
+.work-img[class*="ph-"] {
+  background-color: var(--navy);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.work-img[class*="ph-"]::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(12,31,74,0) 40%, rgba(12,31,74,0.65) 100%);
+}
+.work-img.ph-office     { background-image: url('../images/works/office.jpg'); }
+.work-img.ph-factory    { background-image: url('../images/works/factory.jpg'); }
+.work-img.ph-commercial { background-image: url('../images/works/commercial.jpg'); }
+.work-img.ph-hospital   { background-image: url('../images/works/hospital.jpg'); }
+/* 写真未設定のカード。枠線のみのプレースホルダー */
+.work-img.no-photo {
+  background: none;
+  border: 1px solid var(--gray-200);
+}
+.work-img.no-photo::after {
+  content: 'No Photo';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-400);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+.work-img.no-photo .work-tag {
+  background: var(--white);
+  color: var(--text-light);
+  border: 1px solid var(--gray-200);
+}
 .work-tag {
+  position: relative;
+  z-index: 1;
   background: rgba(255,255,255,0.9);
   color: var(--navy);
   font-size: 11px;
   font-weight: 700;
   padding: 4px 10px;
   border-radius: 20px;
+}
+.works-note {
+  margin-top: 20px;
+  font-size: 12px;
+  color: var(--text-light);
 }
 .work-body { padding: 14px 16px; background: var(--white); }
 .work-loc { font-size: 12px; color: var(--text-light); margin-bottom: 4px; }
