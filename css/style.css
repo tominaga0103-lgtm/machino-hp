@@ -305,12 +305,34 @@ section { padding: 80px 0; }
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  background-color: var(--navy);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.svc-img.s1 { background: linear-gradient(135deg, #1a3a6b, #2563eb); }
-.svc-img.s2 { background: linear-gradient(135deg, #1e3a5f, #1a5f8a); }
-.svc-img.s3 { background: linear-gradient(135deg, #14345a, #1a6b4a); }
-.svc-img.s4 { background: linear-gradient(135deg, #2a1a5e, #4a2a8e); }
-.svc-img svg { width: 48px; height: 48px; stroke: rgba(255,255,255,0.7); fill: none; }
+/* 写真の上に各サービスのカラーを重ねる */
+.svc-img::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.55;
+}
+.svc-img.s1 { background-image: url('../images/services/design.jpg'); }
+.svc-img.s2 { background-image: url('../images/services/construction.jpg'); }
+.svc-img.s3 { background-image: url('../images/services/maintenance.jpg'); }
+.svc-img.s4 { background-image: url('../images/services/renewal.jpg'); }
+.svc-img.s1::before { background: linear-gradient(135deg, #1a3a6b, #2563eb); }
+.svc-img.s2::before { background: linear-gradient(135deg, #1e3a5f, #1a5f8a); }
+.svc-img.s3::before { background: linear-gradient(135deg, #14345a, #1a6b4a); }
+.svc-img.s4::before { background: linear-gradient(135deg, #2a1a5e, #4a2a8e); }
+.svc-img svg {
+  position: relative;
+  z-index: 1;
+  width: 48px; height: 48px;
+  stroke: rgba(255,255,255,0.7);
+  fill: none;
+}
 .svc-info { padding: 14px 16px; }
 .svc-name { font-size: 14px; font-weight: 700; color: var(--navy); }
 .svc-sub { font-size: 12px; color: var(--text-light); margin-top: 4px; }
@@ -507,12 +529,37 @@ section { padding: 80px 0; }
   display: flex; align-items: center; justify-content: center;
   color: rgba(255,255,255,0.25);
   font-size: 14px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--navy);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.svc-detail-img.bg1 { background: linear-gradient(135deg, #0c1f4a, #1d4ed8); }
-.svc-detail-img.bg2 { background: linear-gradient(135deg, #0c2a3a, #0891b2); }
-.svc-detail-img.bg3 { background: linear-gradient(135deg, #0c2a1a, #16a34a); }
-.svc-detail-img.bg4 { background: linear-gradient(135deg, #1a0c3a, #7c3aed); }
-.svc-detail-img svg { width: 64px; height: 64px; stroke: rgba(255,255,255,0.5); fill: none; }
+/* 写真の上に各サービスのカラーを重ねる
+   （詳細ページは表示が大きく、bg1〜bg4 のグラデーションもカードより彩度が高いため、
+     カード側の 0.55 より薄い 0.30 で見え方を揃えている） */
+.svc-detail-img::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.30;
+}
+.svc-detail-img.bg1 { background-image: url('../images/services/design-lg.jpg'); }
+.svc-detail-img.bg2 { background-image: url('../images/services/construction-lg.jpg'); }
+.svc-detail-img.bg3 { background-image: url('../images/services/maintenance-lg.jpg'); }
+.svc-detail-img.bg4 { background-image: url('../images/services/renewal-lg.jpg'); }
+.svc-detail-img.bg1::before { background: linear-gradient(135deg, #0c1f4a, #1d4ed8); }
+.svc-detail-img.bg2::before { background: linear-gradient(135deg, #0c2a3a, #0891b2); }
+.svc-detail-img.bg3::before { background: linear-gradient(135deg, #0c2a1a, #16a34a); }
+.svc-detail-img.bg4::before { background: linear-gradient(135deg, #1a0c3a, #7c3aed); }
+.svc-detail-img svg {
+  position: relative;
+  z-index: 1;
+  width: 64px; height: 64px;
+  stroke: rgba(255,255,255,0.5);
+  fill: none;
+}
 .svc-detail-text {}
 .svc-detail-num { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: var(--blue); margin-bottom: 8px; text-transform: uppercase; }
 .svc-detail-title { font-size: clamp(20px, 3vw, 28px); font-weight: 900; color: var(--navy); margin-bottom: 16px; }
