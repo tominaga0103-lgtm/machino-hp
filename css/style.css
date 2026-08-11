@@ -387,6 +387,11 @@ section { padding: 80px 0; }
 .work-img.ph-factory    { background-image: url('../images/works/factory.jpg'); }
 .work-img.ph-commercial { background-image: url('../images/works/commercial.jpg'); }
 .work-img.ph-hospital   { background-image: url('../images/works/hospital.jpg'); }
+.work-img.ph-school     { background-image: url('../images/works/school.jpg'); }
+.work-img.ph-warehouse  { background-image: url('../images/works/warehouse.jpg'); }
+.work-img.ph-building   { background-image: url('../images/works/building.jpg'); }
+.work-img.ph-welfare    { background-image: url('../images/works/welfare.jpg'); }
+.work-img.ph-hotel      { background-image: url('../images/works/hotel.jpg'); }
 /* 写真未設定のカード。枠線のみのプレースホルダー */
 .work-img.no-photo {
   background: none;
